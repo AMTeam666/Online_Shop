@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('category_name');
             $table->text('description')->nullable();
-            $table->text('category_image');
+            // $table->text('category_image');
             $table->timestamps();
         });
     }

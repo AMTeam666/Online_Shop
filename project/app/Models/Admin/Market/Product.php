@@ -14,13 +14,14 @@ class Product extends Model
     protected $fillable = 
     ['product_name', 
     'product_image', 
-    'price', 'stock', 
+    'price', 
+    'stock', 
     'age_range', 
     'gender', 
     'stock_status', 
     'category_id', 
     'user_id',
-     'brand_id'] ;
+    'brand_id'] ;
 
      public function brand(){
         return $this->belongsTo(Brand::class);

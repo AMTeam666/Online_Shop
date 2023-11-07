@@ -3,10 +3,12 @@
 namespace App\Http\Controllers\Admin\Market;
 
 use Illuminate\Http\Request;
+use App\Models\Admin\Market\Brand;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Market\ProductRequest;
-use App\Http\Services\Image\ImageService;
 use App\Models\Admin\Market\Product;
+use App\Http\Services\Image\ImageService;
+use App\Http\Requests\Market\ProductRequest;
+use App\Models\Admin\Market\ProductCategory;
 
 class ProductController extends Controller
 {
@@ -24,7 +26,9 @@ class ProductController extends Controller
      */
     public function create()
     {
-        return view("admin.market.product.create");
+        $productsCategories = ProductCategory::all();
+        $brands = Brand::all();
+        return view("admin.market.product.create", compact("productsCategories", "brands"));
     }
 
     /**

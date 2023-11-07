@@ -50,9 +50,9 @@ class CategoryController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(ProductCategory $category)
     {
-        return view("admin.market.category.edit");
+        return view("admin.market.category.edit", compact("category"));
     }
 
     /**

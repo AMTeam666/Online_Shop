@@ -63,9 +63,9 @@ class BrandController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Brand $brand)
     {
-        return view("admin.market.brand.edit");
+        return view("admin.market.brand.edit", compact("brand"));
     }
 
     /**

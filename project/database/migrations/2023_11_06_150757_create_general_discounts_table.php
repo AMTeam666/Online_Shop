@@ -19,6 +19,7 @@ return new class extends Migration
             $table->timestamp('started_at')->useCurrent(); 
             $table->timestamp('finished_at')->useCurrent(); 
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

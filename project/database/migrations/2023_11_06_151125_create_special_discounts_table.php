@@ -20,6 +20,7 @@ return new class extends Migration
             $table->timestamp('finished_at')->useCurrent(); 
             $table->foreignId('product_id')->constrained('products')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

@@ -35,7 +35,7 @@
 
                         <section class="col-12 col-md-6">
                             <div class="form-group">
-                                <label>نام فارسی دسته</label>
+                                <label>نام فارسی برند</label>
                                 <input type="text" name="persian_name" class="form-control form-control-sm">
                             </div>
                             @error('persian_name')
@@ -49,7 +49,7 @@
 
                         <section class="col-12 col-md-6">
                             <div class="form-group">
-                                <label>نام اصلی دسته</label>
+                                <label>نام اصلی برند</label>
                                 <input type="text" name="original_name" class="form-control form-control-sm">
                             </div>
                             @error('original_name')
@@ -62,7 +62,7 @@
                         </section>
                         <section class="col-12 col-md-6">
                             <div class="form-group">
-                                <label for="">لوگو بزند</label>
+                                <label for="">لوگو برند</label>
                                 <input type="file" name="logo" class="form-control form-control-sm">
                             </div>
                             @error('logo')
@@ -74,15 +74,12 @@
                             @enderror
                         </section>
 
-                        <section class="col-12 col-md-6 ">
+                        <section class="col-12 my-2">
                             <div class="form-group">
-                                <label for="tags"> تگ ها</label>
-                                <input name="tags" type="hidden" class="form-control form-control-sm" id="tags" value="{{ old('tags') }}">
-                                <select  class="select2 form-control form-control-sm" id="select_tags" multiple>
-
-                                </select>
+                                <label for="description">توضیحات</label>
+                                <textarea name="description" id="description"  class="form-control form-control-sm " rows="6" > {{ old('description') }}</textarea>
                             </div>
-                            @error('tags')
+                            @error('description')
                             <span class="alert_required bg-danger text-white p-1 rounded" role="alert">
                                     <strong>
                                         {{ $message }}

@@ -110,8 +110,9 @@
 
 
 .main-body-container-header h5{
-	font-size: 1.2rem;
+	font-size: 1.6rem;
 	font-weight: bold;
+	text-align: center;
 }
 
 
@@ -209,4 +210,104 @@
 		width: 26rem;
 		max-width: 80%;
 		padding: 2rem;
+	}
+
+
+	/*
+ ********************************MamadLxrd Edits**********************************
+*/
+
+    /* ###############   admin/layout/market/category/index  ################## */
+
+	.button-create-category {
+		display:inline-block;
+		padding: 0px 0px 0px 5px;
+		background-color: white;
+		font-size: 0px;
+		border-right:3px;
+		border: none;
+		border-radius: 8px;
+		transition:.8s ,font-size 1s;
+		width: 0%;
+		height: 36px;
+	}
+
+	.button-create-category:hover{
+		background-color: #007914;
+		box-shadow: 2px 1px 5px rgb(165, 165, 165);
+		width: 200px;
+		font-size: 15px;
+
+
+		
+	}
+	.button-create-category span {
+		/* display: inline-block; */
+		font-size: 15px;
+		
+	}
+
+	.button-create-category-plus {
+		display:inline-block;
+		text-align: center;
+		justify-content: center;
+		padding-top: 8px;
+		padding-bottom: 5px;
+		padding-left: 15px;
+		padding-right: 15px;
+		border-radius: 8px;
+		background-color:#007914 ;
+	}
+
+	
+
+	/* ###############   admin/layout/market/category/create  ################## */
+
+	.section-name-create-category{
+		flex: none;
+		margin: auto;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: none;
+		width:50%;
+		
+		
+	}
+	.div-name-create-category{
+		font-size: 18px;
+		
+	}
+
+	.input-name-create-category{
+		width:100%;
+
+	}
+
+
+
+
+	.section-description-create-category{
+		margin: auto;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: none;
+		width: 50%;
+	}
+	.div-description-create-category{
+		width: 50%;
+		font-size: 18px;
+		margin: auto;
+	}
+
+	
+	.section-button-submit-create-category{
+		margin: 30px;
+		width: 50%;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+	}
+	.button-submit-create-category{
+		padding: 10px 20px;
+		font-size: 16px;
 	}

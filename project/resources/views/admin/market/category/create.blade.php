@@ -34,10 +34,11 @@
                     @csrf
                     <section class="row">
 
-                        <section class="col-12 col-md-6">
-                            <div class="form-group">
-                                <label>نام دسته</label>
-                                <input type="text" name="name" value="{{ old('name') }}" class="form-control form-control-sm">
+                        <section class="col-12 col-md-6 section-name-create-category">
+                            <div class="form-group div-name-create-category" >
+                                <label class="label-name-create-category">نام دسته بندی جدید</label>
+                                <input type="text" name="name" value="{{ old('name') }}" class="form-control form-control-sm input-name-create-category" 
+                                style="text-align: center;" placeholder="نمونه : ماشین ها" onfocus="this.placeholder = ''" onblur="this.placeholder = 'نمونه : ماشین ها'">
                             </div>
                             @error('name')
                             <span class="alert_required bg-danger text-white p-1 rounded" role="alert">
@@ -47,32 +48,12 @@
                             </span>
                             @enderror
                         </section>
-                        <section class="col-12 col-md-6">
-                            <div class="form-group">
-                                <label for="">منو والد</label>
-                                <select name="parent_id" id="" class="form-control form-control-sm">
-                                    <option value="">منوی اصلی</option>
-                                    @foreach ($categories as $category)
 
-                                        <option value="{{ $category->id }}"  @if(old('parent_id') == $category->id) selected @endif>{{ $category ->name }}</option>
 
-                                    @endforeach
-
-                                </select>
-                            </div>
-                            @error('parent_id')
-                            <span class="alert_required bg-danger text-white p-1 rounded" role="alert">
-                                <strong>
-                                    {{ $message }}
-                                </strong>
-                            </span>
-                            @enderror
-                        </section>
-
-                        <section class="col-12 my-2">
-                            <div class="form-group">
+                        <section class="col-12 my-2 section-description-create-category">
+                            <div class="form-group div-description-create-category">
                                 <label for="description">توضیحات</label>
-                                <textarea name="description" id="description"  class="form-control form-control-sm" rows="6"> {{ old('description') }}</textarea>
+                                <textarea name="description" id="description"  class="form-control form-control-sm textarea-description-create-category" > {{ old('description') }}</textarea>
                             </div>
                             @error('description')
                             <span class="alert_required bg-danger text-white p-1 rounded" role="alert">
@@ -83,57 +64,14 @@
                             @enderror
                         </section>
 
-                        <section class="col-12 col-md-6 my-2">
-                            <div class="form-group">
-                                <label for="image">  تصویر</label>
-                                <input name="image" type="file" class="form-control form-control-sm" id="image">
-                            </div>
-                            @error('image')
-                            <span class="alert_required bg-danger text-white p-1 rounded" role="alert">
-                                    <strong>
-                                        {{ $message }}
-                                    </strong>
-                                </span>
-                            @enderror
-                        </section>
 
-                        <section class="col-12 col-md-6 my-2">
-                            <div class="form-group">
-                                <label for="tags"> تگ ها</label>
-                                <input name="tags" type="hidden" class="form-control form-control-sm" id="tags" value="{{ old('tags') }}">
-                                <select  class="select2 form-control form-control-sm" id="select_tags" multiple>
+                        
 
-                                </select>
-                            </div>
-                            @error('tags')
-                            <span class="alert_required bg-danger text-white p-1 rounded" role="alert">
-                                    <strong>
-                                        {{ $message }}
-                                    </strong>
-                                </span>
-                            @enderror
-                        </section>
-
-                        <section class="col-12 col-md-6 my-2">
-                            <div class="form-group">
-                                <label for="status"> وضعیت</label>
-                                <select name="status" id="status" class="form-control form-control-sm">
-                                    <option value="0" @if(old('status') == 0) selected @endif>غیر فعال</option>
-                                    <option value="1" @if(old('status') == 1) selected @endif>فعال</option>
-                                </select>
-                            </div>
-                            @error('status')
-                            <span class="alert_required bg-danger text-white p-1 rounded" role="alert">
-                                    <strong>
-                                        {{ $message }}
-                                    </strong>
-                                </span>
-                            @enderror
-                        </section>
+                        
 
 
-                        <section class="col-12">
-                            <button type="submit" class="btn btn-primary btn-sm">ثبت</button>
+                        <section class="col-12 section-button-submit-create-category">
+                            <button type="submit" class="btn btn-primary btn-sm button-submit-create-category">ثبت</button>
                         </section>
 
                     </section>

@@ -40,7 +40,9 @@
                                 <th>نام فارسی برند</th>
                                 <th>نام اصلی برند</th>
                                 <th>لوگو</th>
+                                <th>توضیحات</th>
                                 <th>وضعیت</th>
+
                                 <th class="max-width-16-rem text-center"><i class="fa fa-cogs"></i> تنظیمات کلی </th>
                             </tr>
                         </thead>

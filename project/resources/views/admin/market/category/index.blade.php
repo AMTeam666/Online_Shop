@@ -21,12 +21,12 @@
             <section class="main-body-container">
                 <section class="main-body-container-header">
                     <h5>
-                        دسته بندی
+                        دسته بندی ها
                     </h5>
                 </section>
 
                 <section class="d-flex justify-content-between align-items-center mt-4 mb-3 border-bottom pb-2">
-                    <a href="{{ route('admin.market.category.create') }}" class="btn btn-info btn-sm">ایجاد دسته بندی</a>
+                    <a href="{{ route('admin.market.category.create') }}" class="btn btn-info btn-sm button-create-category"><span class="button-create-category-plus"> + </span>ایجاد دسته بندی</a>
                     <div class="max-width-16-rem">
                         <input type="text" placeholder="جست و جو .." class="form-control form-control-sm form-text">
                     </div>
@@ -38,12 +38,8 @@
                             <tr>
                                 <th>#</th>
                                 <th>نام دسته بندی</th>
-                                <th>دسته والد</th>
                                 <th>توضیحات</th>
-                                <th>اسلاگ</th>
-                                <th>تگ ها</th>
-                                <th>وضعیت</th>
-                                <th>وضعیت نمایش</th>
+                                
                                 <th class="max-width-16-rem text-center"><i class="fa fa-cogs"></i> تنظیمات کلی </th>
                             </tr>
                         </thead>

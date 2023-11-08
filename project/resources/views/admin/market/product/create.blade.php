@@ -52,6 +52,48 @@
 
                             <section class="col-12 col-md-6">
                                 <div class="form-group">
+                                    <label for="">تصویر </label>
+                                    <input type="file" name="image" class="form-control form-control-sm">
+                                </div>
+                                @error('image')
+                                <span class="alert_required bg-danger text-white p-1 rounded" role="alert">
+                                <strong>
+                                    {{ $message }}
+                                </strong>
+                            </span>
+                                @enderror
+                            </section>
+
+                            <section class="col-12 col-md-6">
+                                <div class="form-group">
+                                    <label for="">قیمت</label>
+                                    <input type="text" name="weight" class="form-control form-control-sm" value="{{ old('weight') }}">
+                                </div>
+                                @error('weight')
+                                <span class="alert_required bg-danger text-white p-1 rounded" role="alert">
+                                <strong>
+                                    {{ $message }}
+                                </strong>
+                            </span>
+                                @enderror
+                            </section>
+
+                            <section class="col-12 col-md-6">
+                                <div class="form-group">
+                                    <label for="">تعداد موجود</label>
+                                    <input type="text" name="length" class="form-control form-control-sm" value="{{ old('length') }}">
+                                </div>
+                                @error('length')
+                                <span class="alert_required bg-danger text-white p-1 rounded" role="alert">
+                                <strong>
+                                    {{ $message }}
+                                </strong>
+                            </span>
+                                @enderror
+                            </section>
+
+                            <section class="col-12 col-md-6">
+                                <div class="form-group">
                                     <label for="">انتخاب دسته</label>
                                     <select name="category_id" id="" class="form-control form-control-sm">
                                         <option value="">دسته را انتخاب کنید</option>
@@ -90,51 +132,10 @@
                                 @enderror
                             </section>
 
-                            <section class="col-12 col-md-6">
-                                <div class="form-group">
-                                    <label for="">تصویر </label>
-                                    <input type="file" name="image" class="form-control form-control-sm">
-                                </div>
-                                @error('image')
-                                <span class="alert_required bg-danger text-white p-1 rounded" role="alert">
-                                <strong>
-                                    {{ $message }}
-                                </strong>
-                            </span>
-                                @enderror
-                            </section>
 
                             <section class="col-12 col-md-6">
                                 <div class="form-group">
-                                    <label for="">وزن</label>
-                                    <input type="text" name="weight" class="form-control form-control-sm" value="{{ old('weight') }}">
-                                </div>
-                                @error('weight')
-                                <span class="alert_required bg-danger text-white p-1 rounded" role="alert">
-                                <strong>
-                                    {{ $message }}
-                                </strong>
-                            </span>
-                                @enderror
-                            </section>
-
-                            <section class="col-12 col-md-6">
-                                <div class="form-group">
-                                    <label for="">طول</label>
-                                    <input type="text" name="length" class="form-control form-control-sm" value="{{ old('length') }}">
-                                </div>
-                                @error('length')
-                                <span class="alert_required bg-danger text-white p-1 rounded" role="alert">
-                                <strong>
-                                    {{ $message }}
-                                </strong>
-                            </span>
-                                @enderror
-                            </section>
-
-                            <section class="col-12 col-md-6">
-                                <div class="form-group">
-                                    <label for="">عرض</label>
+                                    <label for="">جنسیت</label>
                                     <input type="text" name="width" class="form-control form-control-sm" value="{{ old('width') }}">
                                 </div>
                                 @error('width')
@@ -148,7 +149,7 @@
 
                             <section class="col-12 col-md-6">
                                 <div class="form-group">
-                                    <label for="">ارتفاع</label>
+                                    <label for="">رنج سنی</label>
                                     <input type="text" name="height" class="form-control form-control-sm" value="{{ old('height') }}">
                                 </div>
                                 @error('height')
@@ -160,19 +161,6 @@
                                 @enderror
                             </section>
 
-                            <section class="col-12 col-md-6">
-                                <div class="form-group">
-                                    <label for="">قیمت کالا</label>
-                                    <input type="text" name="price" class="form-control form-control-sm" value="{{ old('price') }}">
-                                </div>
-                                @error('price')
-                                <span class="alert_required bg-danger text-white p-1 rounded" role="alert">
-                                <strong>
-                                    {{ $message }}
-                                </strong>
-                            </span>
-                                @enderror
-                            </section>
 
                             <section class="col-12">
                                 <div class="form-group">
@@ -188,39 +176,7 @@
                                 @enderror
                             </section>
 
-                            <section class="col-12 col-md-6 my-2">
-                                <div class="form-group">
-                                    <label for="status"> وضعیت</label>
-                                    <select name="status" id="status" class="form-control form-control-sm">
-                                        <option value="0" @if(old('status') == 0) selected @endif>غیر فعال</option>
-                                        <option value="1" @if(old('status') == 1) selected @endif>فعال</option>
-                                    </select>
-                                </div>
-                                @error('status')
-                                <span class="alert_required bg-danger text-white p-1 rounded" role="alert">
-                                    <strong>
-                                        {{ $message }}
-                                    </strong>
-                                </span>
-                                @enderror
-                            </section>
 
-                            <section class="col-12 col-md-6 my-2">
-                                <div class="form-group">
-                                    <label for="marketable"> قابل فروش بودن</label>
-                                    <select name="marketable" id="marketable" class="form-control form-control-sm">
-                                        <option value="0" @if(old('marketable') == 0) selected @endif>غیر فعال</option>
-                                        <option value="1" @if(old('marketable') == 1) selected @endif>فعال</option>
-                                    </select>
-                                </div>
-                                @error('marketable')
-                                <span class="alert_required bg-danger text-white p-1 rounded" role="alert">
-                                    <strong>
-                                        {{ $message }}
-                                    </strong>
-                                </span>
-                                @enderror
-                            </section>
 
                             <section class="col-12 col-md-6">
                                 <div class="form-group">
@@ -241,7 +197,7 @@
 
                             <section class="col-12 col-md-6">
                                 <div class="form-group">
-                                    <label for="">تاریخ انتشار</label>
+                                    <label for="">تاریخ تولید</label>
                                     <input type="text" name="published_at" id="published_at" class="form-control form-control-sm d-none">
                                     <input type="text" id="published_at_view" class="form-control form-control-sm">
                                 </div>
@@ -277,7 +233,26 @@
                                 </section>
 
 
+
                             </section>
+
+                            <section class="col-12 col-md-6 my-2">
+                                <div class="form-group">
+                                    <label for="status"> وضعیت</label>
+                                    <select name="status" id="status" class="form-control form-control-sm">
+                                        <option value="0" @if(old('status') == 0) selected @endif>غیر فعال</option>
+                                        <option value="1" @if(old('status') == 1) selected @endif>فعال</option>
+                                    </select>
+                                </div>
+                                @error('status')
+                                <span class="alert_required bg-danger text-white p-1 rounded" role="alert">
+                                    <strong>
+                                        {{ $message }}
+                                    </strong>
+                                </span>
+                                @enderror
+                            </section>
+
 
                             <section class="col-12">
                                 <button class="btn btn-primary btn-sm">ثبت</button>

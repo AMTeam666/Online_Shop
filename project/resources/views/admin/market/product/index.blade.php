@@ -37,10 +37,14 @@
                         <tr>
                             <th>#</th>
                             <th>نام کالا</th>
-                            <th> تصویر کالا</th>
-                            <th> قیمت</th>
-                            <th>وزن </th>
-                            <th>دسته </th>
+                            <th>تصویر کالا</th>
+                            <th>قیمت</th>
+                            <th>تعداد موجود</th>
+                            <th>دسته بندی</th>
+                            <th>برند کالا</th>
+                            <th>جنسیت</th>
+                            <th>رنج سنی</th>
+                            <th>وضعیت</th>
                             <th class="max-width-16-rem text-center"><i class="fa fa-cogs"></i> تنظیمات</th>
                         </tr>
                         </thead>

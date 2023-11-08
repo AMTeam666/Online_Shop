@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin\Market;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Admin\Market\ProductCategory;
-use App\Http\Requests\Market\CategoryRequest;
+use App\Http\Requests\Admin\Market\CategoryRequest;
 
 class CategoryController extends Controller
 {

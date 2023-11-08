@@ -26,7 +26,7 @@
 
     @include('admin.layouts.scripts')
     @yield('script')
-
+    {{-- errorrs --}}
     <section class="toast-wrapper flex-row-reverse">
         @include('admin.alerts.toast.success')
         @include('admin.alerts.toast.error')
@@ -34,5 +34,6 @@
 
     @include('admin.alerts.sweetalert.success')
     @include('admin.alerts.sweetalert.error')
+    {{-- end errors --}}
 </body>
 </html>

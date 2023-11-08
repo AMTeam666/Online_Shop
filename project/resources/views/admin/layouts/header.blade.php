@@ -23,7 +23,7 @@
 
 
             </section>
-
+			{{-- notifactions bar --}}
             <section>
 				 <span class="ml-2 ml-md-4 position-relative">
 					 <span id="header-notification-toggle" class="pointer">
@@ -209,8 +209,10 @@
 							</ul>
 						</section>
 					</section>
-
 				</span>
+				{{-- end notifaction bar --}}
+
+				{{-- profile  --}}
                 <span class="ml-3 ml-md-5 position-relative">
 					<span id="header-profile-toggle" class="pointer">
 						<img  class="header-avatar" src="{{ asset('admin-assets/images/avatar-2.jpg') }}" alt="avatar">
@@ -241,6 +243,8 @@
 							</a>
 						</section>
 					</section>
+
+					{{-- end profile --}}
 
 				</span>
             </section>

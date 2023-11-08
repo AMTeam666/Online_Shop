@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('brand_name');
             $table->string('description')->nullable();
             $table->text('logo');
+            $table->string('slug')->unique()->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

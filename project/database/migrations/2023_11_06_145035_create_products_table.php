@@ -17,6 +17,7 @@ return new class extends Migration
             $table->text('product_image');
             $table->bigInteger('price');
             $table->integer('stock')->comment('mojodi');
+            $table->string('slug')->unique()->nullable();
             $table->integer('age_range')->comment('renge seni');
             $table->tinyInteger('gender')->comment('0 => dokhtar .. 1 => pesar .. 2 => both');
             $table->tinyInteger('stock_status')->comment('0 => nist .. 1 => hast');

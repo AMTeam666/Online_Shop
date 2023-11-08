@@ -14,8 +14,8 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $categories = ProductCategory::orderBy("id","desc")->paginate(10);
-        return view("admin.market.category.index", compact("categories"));
+        $productCategories = ProductCategory::orderBy("id","desc")->paginate(10);
+        return view("admin.market.category.index", compact("productCategories"));
     }
 
     /**
@@ -23,7 +23,8 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        return view("admin.market.category.create");
+        $categories = ProductCategory::all();
+        return view("admin.market.category.create", compact("categories"));
 
     }
 

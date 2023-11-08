@@ -48,7 +48,7 @@ Route::prefix("admin")->namespace('Admin')->group(function () {
 
         //product
         Route::prefix('product')->group(function(){
-            Route::get('/',[ProductController::class , 'index'])->name('adminv.product.index');
+            Route::get('/',[ProductController::class , 'index'])->name('admin.market.product.index');
             Route::get('/create',[ProductController::class , 'create'])->name('admin.market.product.create');
             Route::get('/edit/{product}',[ProductController::class , 'edit'])->name('admin.market.product.edit');
             Route::post('/store',[ProductController::class , 'store'])->name('admin.market.product.store');

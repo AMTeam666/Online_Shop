@@ -16,9 +16,9 @@
                     <i class="fas fa-angle-left angle"></i>
                 </section>
                 <section class="sidebar-dropdown">
-                    <a href="{{ route('admin.category.index') }}">دسته بندی</a>
-                    <a href="{{ route('admin.brand.index') }}">برندها</a>
-                    <a href="{{ route('admin.product.index') }}">کالاها</a>
+                    <a href="{{ route('admin.market.category.index') }}">دسته بندی</a>
+                    <a href="{{ route('admin.market.brand.index') }}">برندها</a>
+                    <a href="{{ route('admin.market.product.index') }}">کالاها</a>
                 </section>
             </section>
 

@@ -26,7 +26,7 @@
                 </section>
 
                 <section class="d-flex justify-content-between align-items-center mt-4 mb-3 border-bottom pb-2">
-                    <a href="{{ route('admin.brand.create') }}" class="btn btn-info btn-sm">ایجاد برند</a>
+                    <a href="{{ route('admin.market.brand.create') }}" class="btn btn-info btn-sm">ایجاد برند</a>
                     <div class="max-width-16-rem">
                         <input type="text" placeholder="جست و جو .." class="form-control form-control-sm form-text">
                     </div>
@@ -63,8 +63,8 @@
                                     </label>
                                 </td>
                                 <td class="width-16-rem text-left">
-                                    <a href="{{ route('admin.brand.edit', $brand->id) }}" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i> ویراش</a>
-                                    <form class="d-inline" action="{{ route('admin.brand.destroy', $brand->id) }}" method="post">
+                                    <a href="{{ route('admin.market.brand.edit', $brand->id) }}" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i> ویراش</a>
+                                    <form class="d-inline" action="{{ route('admin.market.brand.destroy', $brand->id) }}" method="post">
                                         @csrf
                                         {{ method_field('delete') }}
                                         <button class="btn btn-danger btn-sm delete" type="submit"><i class="fa fa-trash-alt"></i> حذف</button>

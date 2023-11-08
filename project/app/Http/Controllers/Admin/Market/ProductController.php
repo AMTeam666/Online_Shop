@@ -7,7 +7,7 @@ use App\Models\Admin\Market\Brand;
 use App\Http\Controllers\Controller;
 use App\Models\Admin\Market\Product;
 use App\Http\Services\Image\ImageService;
-use App\Http\Requests\Market\ProductRequest;
+use App\Http\Requests\Admin\Market\ProductRequest;
 use App\Models\Admin\Market\ProductCategory;
 
 class ProductController extends Controller

@@ -11,7 +11,7 @@ class PostCategoryRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -20,9 +20,11 @@ class PostCategoryRequest extends FormRequest
      * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array<mixed>|string>
      */
     public function rules(): array
-    {
-        return [
-            //
-        ];
+    {   
+            return [
+                'name' => 'required|max:120|min:3|regex:/^[ا-یa-zA-Z0-9\ِ., ]+$/u',
+                'tags' => 'required|regex:/^[ا-یa-zA-Z0-9\ِ., ]+$/u',
+            ];
+         
     }
 }

@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\Content\PostController;
 use App\Http\Controllers\Admin\Market\BrandController;
 use App\Http\Controllers\Admin\Market\CommentController;
+use App\Http\Controllers\Admin\Market\PaymentController;
 use App\Http\Controllers\Admin\Market\ProductController;
 use App\Http\Controllers\Admin\Market\CategoryController;
 use App\Http\Controllers\Admin\Market\DeliveryController;
@@ -80,6 +81,20 @@ Route::prefix("admin")->namespace('Admin')->group(function () {
             Route::get('/approved/{comment}', [CommentController::class, 'approved'] )->name('admin.market.comment.approved');
             Route::post('/answer/{comment}', [CommentController::class, 'answer'] )->name('admin.market.comment.answer');
         });
+
+            //payment
+        Route::prefix('payment')->group(function(){
+            Route::get('/', [PaymentController::class, 'index'])->name('admin.market.payment.index');
+            Route::get('/show/{payment}', [PaymentController::class, 'show'])->name('admin.market.payment.show');
+            Route::get('/online', [PaymentController::class, 'online'])->name('admin.market.payment.online');
+            Route::get('/offline', [PaymentController::class, 'offline'])->name('admin.market.payment.offline');
+            Route::get('/cash', [PaymentController::class, 'cash'])->name('admin.market.payment.cash');
+            Route::get('/payed/{payment}', [PaymentController::class, 'payed'])->name('admin.market.payment.payed');
+            Route::get('/canceled/{payment}', [PaymentController::class, 'canceled'])->name('admin.market.payment.canceled');
+            Route::get('/returned/{payment}', [PaymentController::class, 'returned'])->name('admin.market.payment.returned');
+        });
+
+        
     });
 
      Route::prefix('content')->namespace('Content')->group(function(){

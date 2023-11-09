@@ -101,6 +101,8 @@ Route::prefix("admin")->namespace('Admin')->group(function () {
             Route::post('/store',[PostController::class , 'store'])->name('admin.content.posts.store');
             Route::patch('/update/{post}',[PostController::class , 'update'])->name('admin.content.posts.update');
             Route::delete('/destroy/{post}',[PostController::class , 'destroy'])->name('admin.content.posts.destroy');
+            Route::get('/commentable/{post}', [ContentCommentController::class, 'commentable'] )->name('admin.content.posts.commentable');
+
         });
 
         //comments

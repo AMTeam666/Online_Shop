@@ -26,7 +26,7 @@
                 </section>
 
                 <section class="d-flex justify-content-between align-items-center mt-4 mb-3 border-bottom pb-2">
-                    <a href="{{ route('admin.market.brand.create') }}" class="btn btn-info btn-sm">ایجاد برند</a>
+                    <a href="{{ route('admin.market.brand.create') }}" class="btn btn-info btn-sm button-create-category"><span class="button-create-category-plus"> + </span>ایجاد برند جدید</a>
                     <div class="max-width-16-rem">
                         <input type="text" placeholder="جست و جو .." class="form-control form-control-sm form-text">
                     </div>

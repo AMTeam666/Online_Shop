@@ -31,6 +31,7 @@ class Post extends Model
         'summary',
         'image',
         'slug',
+        'status',
         'commentable',
         'tags',
         'published_at',

@@ -25,7 +25,7 @@
                 </section>
 
                 <section class="d-flex justify-content-between align-items-center mt-4 mb-3 border-bottom pb-2">
-                    <a href="{{ route('admin.content.post.create') }}" class="btn btn-info btn-sm">ایجاد پست </a>
+                    <a href="{{ route('admin.content.posts.create') }}" class="btn btn-info btn-sm">ایجاد پست </a>
                     <div class="max-width-16-rem">
                         <input type="text" class="form-control form-control-sm form-text" placeholder="جستجو">
                     </div>
@@ -66,14 +66,14 @@
 
                                 <td>
                                     <label>
-                                        <input id="{{ $post['id'] }}-commentable" onchange="commentable({{ $post['id'] }})" data-url="{{ route('admin.content.post.commentable', $post['id']) }}" type="checkbox" @if ($post['commentable'] === 1)
+                                        <input id="{{ $post['id'] }}-commentable" onchange="commentable({{ $post['id'] }})" data-url="{{ route('admin.content.posts.commentable', $post['id']) }}" type="checkbox" @if ($post['commentable'] === 1)
                                             checked
                                             @endif>
                                     </label>
                                 </td>
                                 <td class="width-16-rem text-left">
-                                    <a href="{{ route('admin.content.post.edit', $post->id) }}" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i> ویرایش</a>
-                                    <form class="d-inline" action="{{ route('admin.content.post.destroy', $post->id) }}" method="post">
+                                    <a href="{{ route('admin.content.posts.edit', $post->id) }}" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i> ویرایش</a>
+                                    <form class="d-inline" action="{{ route('admin.content.posts.destroy', $post->id) }}" method="post">
                                         @csrf
                                         {{ method_field('delete') }}
                                         <button class="btn btn-danger btn-sm delete" type="submit"><i class="fa fa-trash-alt"></i> حذف</button>

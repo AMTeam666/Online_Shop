@@ -36,7 +36,7 @@ class CategoryController extends Controller
         $inputs = $request->all();
 
         $category = ProductCategory::create($inputs);
-        return redirect()->route('admin.category.index')->with('swal-success','دسته بندی جدید شما با موفقیت ساخته شد');   
+        return redirect()->route('admin.market.category.index')->with('swal-success','دسته بندی جدید شما با موفقیت ساخته شد');   
 
     }
 
@@ -63,7 +63,7 @@ class CategoryController extends Controller
     {
         $inputs = $request->all();
         $category->update($inputs);
-        return redirect()->route('admin.category.index')->with('swal-success','دسته بندی جدید شما با موفقیت ویرایش شد');   
+        return redirect()->route('admin.market.category.index')->with('swal-success','دسته بندی جدید شما با موفقیت ویرایش شد');   
 
     }
 
@@ -73,6 +73,6 @@ class CategoryController extends Controller
     public function destroy(ProductCategory $category)
     {
         $result = $category->delete();
-        return redirect()->route('admin.category.index')->with('swal-success', ' دسته بندی شما با موفقیت حذف شد');    
+        return redirect()->route('admin.market.category.index')->with('swal-success', ' دسته بندی شما با موفقیت حذف شد');    
     }
 }

@@ -37,11 +37,9 @@
                         <thead>
                             <tr>
                                 <th>#</th>
-                                <th>نام فارسی برند</th>
-                                <th>نام اصلی برند</th>
+                                <th>نام برند</th>
                                 <th>لوگو</th>
                                 <th>توضیحات</th>
-                                <th>وضعیت</th>
 
                                 <th class="max-width-16-rem text-center"><i class="fa fa-cogs"></i> تنظیمات کلی </th>
                             </tr>
@@ -52,17 +50,9 @@
 
                             <tr>
                                 <th>{{ $key += 1 }}</th>
-                                <td>{{ $brand->persian_name }}</td>
-                                <td>{{ $brand->original_name }}</td>
+                                <td>{{ $brand->name }}</td>
                                 <td>
                                     <img src="{{ asset($brand->logo) }}" alt="" width="100" height="50">
-                                </td>
-                                <td>
-                                    <label>
-                                        <input id="{{ $brand->id }}" onchange="changeStatus({{ $brand->id }})" data-url="{{ route('admin.market.brand.status', $brand->id) }}" type="checkbox" @if ($brand->status === 1)
-                                            checked
-                                            @endif>
-                                    </label>
                                 </td>
                                 <td class="width-16-rem text-left">
                                     <a href="{{ route('admin.market.brand.edit', $brand->id) }}" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i> ویراش</a>

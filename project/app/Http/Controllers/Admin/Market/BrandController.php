@@ -42,13 +42,13 @@ class BrandController extends Controller
 
             if($result === false)
             {
-                return redirect()->route('admin.brand.index')->with('swal-error', 'آپلود تصویر با خطا مواجه شد');
+                return redirect()->route('admin.market.brand.index')->with('swal-error', 'آپلود تصویر با خطا مواجه شد');
             }
 
             $inputs['logo'] = $result;
         }
         $brand = Brand::create($inputs);
-        return redirect()->route('admin.brand.index')->with('swal-success','برند جدید شما با موفقیت ساخته شد');   
+        return redirect()->route('admin.market.brand.index')->with('swal-success','برند جدید شما با موفقیت ساخته شد');   
     
     }
 
@@ -85,13 +85,13 @@ class BrandController extends Controller
             $result = $imageService->save($request->file('logo'));
             if($result === false)
             {
-                return redirect()->route('admin.brand.index')->with('swal-error', 'آپلود تصویر با خطا مواجه شد');
+                return redirect()->route('admin.market.brand.index')->with('swal-error', 'آپلود تصویر با خطا مواجه شد');
             }
             $inputs['logo'] = $result;
         }
 
         $brand->update($inputs);
-        return redirect()->route('admin.brand.index')->with('swal-success', 'برند شما با موفقیت ویرایش شد');
+        return redirect()->route('admin.market.brand.index')->with('swal-success', 'برند شما با موفقیت ویرایش شد');
     }
     /**
      * Remove the specified resource from storage.
@@ -99,7 +99,7 @@ class BrandController extends Controller
     public function destroy(Brand $brand)
     {
         $result = $brand->delete();
-        return redirect()->route('admin.brand.index')->with('swal-success', ' برند شما با موفقیت حذف شد');
+        return redirect()->route('admin.market.brand.index')->with('swal-success', ' برند شما با موفقیت حذف شد');
     }
 
 }

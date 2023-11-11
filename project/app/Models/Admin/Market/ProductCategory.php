@@ -15,12 +15,12 @@ class ProductCategory extends Model
     {
         return [
             'slug' =>[
-                'source' => 'category_name'
+                'source' => 'name'
             ]
         ];
     }
 
-    protected $fillable = ['category_name', 'description'] ;
+    protected $fillable = ['name', 'description','slug'] ;
 
     public function products(){
         return $this->hasMany(Product::class);

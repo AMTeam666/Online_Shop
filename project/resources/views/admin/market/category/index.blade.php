@@ -49,27 +49,11 @@
                              <tr>
                                 <th>{{ $key += 1 }}</th>
                                 <td>{{ $productCategory->name }}</td>
-                                <td>{{$productCategory->parent_id ? $productCategory->parent->name : 'دسته بندی اصلی' }}</td>
                                  <td>{{ $productCategory->description }}</td>
                                  <td>{{ $productCategory->slug }}</td>
-                                 <td>{{ $productCategory->tags }}</td>
-                                 <td>
-                                     <label>
-                                         <input id="{{ $productCategory->id }}" onchange="changeStatus({{ $productCategory->id }})" data-url="{{ route('admin.market.category.status', $productCategory->id) }}" type="checkbox" @if ($productCategory->status === 1)
-                                             checked
-                                             @endif>
-                                     </label>
-                                 </td>
-                                 <td>
-                                     <label>
-                                         <input id="{{ $productCategory['id'] }}-show" onchange="showMenu({{ $productCategory['id'] }})" data-url="{{ route('admin.market.category.show_menu', $productCategory['id']) }}" type="checkbox" @if ($productCategory['show_in_menu'] === 1)
-                                             checked
-                                             @endif>
-                                     </label>
-                                 </td>
                                 <td class="width-16-rem text-left">
                                     <a href="{{ route('admin.market.category.edit', $productCategory->id) }}" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i> ویراش</a>
-                                    <form class="d-inline" action="{{ route('admin.category.destroy', $productCategory->id) }}" method="post">
+                                    <form class="d-inline" action="{{ route('admin.market.category.destroy', $productCategory->id) }}" method="post">
                                         @csrf
                                         @method('delete')
                                         <button class="btn btn-danger btn-sm delete" type="submit"><i class="fa fa-trash-alt"></i> حذف</button>

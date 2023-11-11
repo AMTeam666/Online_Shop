@@ -28,7 +28,7 @@ class Brand extends Model
 
     protected $cast = ['logo' => 'array'];
 
-    protected $fillable = ['brand_name', 'description', 'logo'];
+    protected $fillable = ['name', 'description', 'logo'];
 
     public function products(){
         return $this->hasMany(Product::class);

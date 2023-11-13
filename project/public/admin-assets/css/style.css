@@ -217,6 +217,10 @@
  ********************************MamadLxrd Edits**********************************
 */
 
+
+	
+
+
     /* ###############   admin/layout/market/category/index  ################## */
 
 	.button-create-category {
@@ -258,7 +262,8 @@
 		border-radius: 8px;
 		background-color:#007914 ;
 	}
-
+	
+	
 	
 
 	/* ###############   admin/layout/market/category/create  ################## */
@@ -310,4 +315,63 @@
 	.button-submit-create-category{
 		padding: 10px 20px;
 		font-size: 16px;
+	}
+
+
+	
+
+	/* ###############   table Edits  ################## */
+	td, th{
+		border-style: solid;
+		border-color: #dee2e6;
+		border-width: 1px;
+		border-radius: 1px;
+	}
+
+	.number-list-header-table-admin-page{
+		width: 50px;
+	}
+
+	.name-header-table-admin-page{
+		width: 10%;
+	}
+
+	.slug-header-table-admin-page{
+		width: 10%;
+	}
+
+	.logo-brand-header-table-admin-page{
+		width: 50px;
+	}
+
+	.total-options-header-table-admin-page{
+		width: 10%;
+	}
+
+	.name-column-table-admin-page{
+		text-align: center;
+		font-size: 13px;
+		font-weight: bold;
+	}
+
+	.slug-column-table-admin-page{
+		text-align: center;
+		font-size: 13px;
+	}
+	.description-column-table-admin-page{
+		font-size: 12px;
+	}
+
+
+	.button-edit-object-admin-page{
+		width: 100%;
+		background: none;
+		border: none;
+		color: #007bff;
+	}
+	.button-delete-object-admin-page{
+		width: 100%;
+		background: none;
+		border: none;
+		color:#dc3545;
 	}

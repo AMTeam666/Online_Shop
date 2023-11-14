@@ -23,7 +23,7 @@ class CategoryRequest extends FormRequest
     {
         return [
             'name' => 'required|min:2|regex:/^[ا-یa-zA-Z0-9\-۰-۹ء-ي., ]+$/u',
-            'description' => 'required|min:2|regex:/^[ا-یa-zA-Z0-9\-۰-۹ء-ي., ]+$/u',       
+            'description' => 'required|min:2|regex:/^[ا-یa-zA-Z0-9\-۰-۹ء-ي.,)(. ]+$/u',       
          ];
     }
 }

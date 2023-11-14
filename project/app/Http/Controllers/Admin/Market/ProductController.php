@@ -40,17 +40,17 @@ class ProductController extends Controller
         if($request->hasFile('product_image'))
         {
             $imageService->setExclusiveDirectory('images' . DIRECTORY_SEPARATOR . 'product');
-            $result = $imageService->save($request->file('product_image'));
+            $result = $imageService->Save($request->file('product_image'));
 
             if($result === false)
             {
-                return redirect()->route('admin.product.index')->with('swal-error', 'آپلود تصویر با خطا مواجه شد');
+                return redirect()->route('admin.market.product.index')->with('swal-error', 'آپلود تصویر با خطا مواجه شد');
             }
 
             $inputs['product_image'] = $result;
         }
         $brand = Product::create($inputs);
-        return redirect()->route('admin.product.index')->with('swal-success','محصول جدید شما با موفقیت ساخته شد');   
+        return redirect()->route('admin.market.product.index')->with('swal-success','محصول جدید شما با موفقیت ساخته شد');   
     
     }
 

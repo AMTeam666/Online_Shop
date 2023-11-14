@@ -39,9 +39,9 @@
                             <section class="col-12 col-md-6">
                                 <div class="form-group">
                                     <label for="">نام کالا</label>
-                                    <input type="text" name="name" class="form-control form-control-sm" value="{{ old('name') }}">
+                                    <input type="text" name="product_name" class="form-control form-control-sm" value="{{ old('product_name') }}">
                                 </div>
-                                @error('name')
+                                @error('product_name')
                                 <span class="alert_required bg-danger text-white p-1 rounded" role="alert">
                                 <strong>
                                     {{ $message }}
@@ -53,9 +53,9 @@
                             <section class="col-12 col-md-6">
                                 <div class="form-group">
                                     <label for="">تصویر </label>
-                                    <input type="file" name="image" class="form-control form-control-sm">
+                                    <input type="file" name="product_image" class="form-control form-control-sm">
                                 </div>
-                                @error('image')
+                                @error('product_image')
                                 <span class="alert_required bg-danger text-white p-1 rounded" role="alert">
                                 <strong>
                                     {{ $message }}
@@ -67,9 +67,9 @@
                             <section class="col-12 col-md-6">
                                 <div class="form-group">
                                     <label for="">قیمت</label>
-                                    <input type="text" name="weight" class="form-control form-control-sm" value="{{ old('weight') }}">
+                                    <input type="text" name="price" class="form-control form-control-sm" value="{{ old('price') }}">
                                 </div>
-                                @error('weight')
+                                @error('price')
                                 <span class="alert_required bg-danger text-white p-1 rounded" role="alert">
                                 <strong>
                                     {{ $message }}
@@ -81,9 +81,9 @@
                             <section class="col-12 col-md-6">
                                 <div class="form-group">
                                     <label for="">تعداد موجود</label>
-                                    <input type="text" name="length" class="form-control form-control-sm" value="{{ old('length') }}">
+                                    <input type="text" name="stock" class="form-control form-control-sm" value="{{ old('stock') }}">
                                 </div>
-                                @error('length')
+                                @error('stock')
                                 <span class="alert_required bg-danger text-white p-1 rounded" role="alert">
                                 <strong>
                                     {{ $message }}
@@ -116,7 +116,7 @@
                                 <div class="form-group">
                                     <label for="">انتخاب برند</label>
                                     <select name="brand_id" id="" class="form-control form-control-sm">
-                                        <option value="">دسته را انتخاب کنید</option>
+                                        <option value="">برند را انتخاب کنید</option>
                                         @foreach ($brands as $brand)
                                             <option value="{{ $brand->id }}" @if(old('brand_id') == $brand->id) selected @endif>{{ $brand->name }}</option>
                                         @endforeach
@@ -136,9 +136,9 @@
                             <section class="col-12 col-md-6">
                                 <div class="form-group">
                                     <label for="">جنسیت</label>
-                                    <input type="text" name="width" class="form-control form-control-sm" value="{{ old('width') }}">
+                                    <input type="text" name="gender" class="form-control form-control-sm" value="{{ old('gender') }}">
                                 </div>
-                                @error('width')
+                                @error('gender')
                                 <span class="alert_required bg-danger text-white p-1 rounded" role="alert">
                                 <strong>
                                     {{ $message }}
@@ -150,9 +150,9 @@
                             <section class="col-12 col-md-6">
                                 <div class="form-group">
                                     <label for="">رنج سنی</label>
-                                    <input type="text" name="height" class="form-control form-control-sm" value="{{ old('height') }}">
+                                    <input type="text" name="age_range" class="form-control form-control-sm" value="{{ old('age_range') }}">
                                 </div>
-                                @error('height')
+                                @error('age_range')
                                 <span class="alert_required bg-danger text-white p-1 rounded" role="alert">
                                 <strong>
                                     {{ $message }}
@@ -165,9 +165,9 @@
                             <section class="col-12">
                                 <div class="form-group">
                                     <label for="">توضیحات</label>
-                                    <textarea name="introduction" id="body"  class="form-control form-control-sm" rows="6">{{ old('introduction ') }}</textarea>
+                                    <textarea name="description" id="body"  class="form-control form-control-sm" rows="6">{{ old('description ') }}</textarea>
                                 </div>
-                                @error('introduction')
+                                @error('description')
                                 <span class="alert_required bg-danger text-white p-1 rounded" role="alert">
                                 <strong>
                                     {{ $message }}
@@ -178,39 +178,7 @@
 
 
 
-                            <section class="col-12 col-md-6">
-                                <div class="form-group">
-                                    <label for="tags"> تگ ها</label>
-                                    <input name="tags" type="hidden" class="form-control form-control-sm" id="tags" value="{{ old('tags') }}">
-                                    <select  class="select2 form-control form-control-sm" id="select_tags" multiple>
-
-                                    </select>
-                                </div>
-                                @error('tags')
-                                <span class="alert_required bg-danger text-white p-1 rounded" role="alert">
-                                    <strong>
-                                        {{ $message }}
-                                    </strong>
-                                </span>
-                                @enderror
-                            </section>
-
-                            <section class="col-12 col-md-6">
-                                <div class="form-group">
-                                    <label for="">تاریخ تولید</label>
-                                    <input type="text" name="published_at" id="published_at" class="form-control form-control-sm d-none">
-                                    <input type="text" id="published_at_view" class="form-control form-control-sm">
-                                </div>
-                                @error('published_at')
-                                <span class="alert_required bg-danger text-white p-1 rounded" role="alert">
-                                <strong>
-                                    {{ $message }}
-                                </strong>
-                            </span>
-                                @enderror
-                            </section>
-
-                            <section class="col-12 border-top border-bottom py-3 mb-3">
+                            {{-- <section class="col-12 border-top border-bottom py-3 mb-3">
 
                                 <section class="row">
 
@@ -230,7 +198,7 @@
 
                                 <section>
                                     <button type="button" id="btn_copy" class="btn btn-success btn-sm">افزودن</button>
-                                </section>
+                                </section> --}}
 
 
 
@@ -238,13 +206,13 @@
 
                             <section class="col-12 col-md-6 my-2">
                                 <div class="form-group">
-                                    <label for="status"> وضعیت</label>
-                                    <select name="status" id="status" class="form-control form-control-sm">
-                                        <option value="0" @if(old('status') == 0) selected @endif>غیر فعال</option>
-                                        <option value="1" @if(old('status') == 1) selected @endif>فعال</option>
+                                    <label for="stock_status"> وضعیت</label>
+                                    <select name="stock_status" id="stock_status" class="form-control form-control-sm">
+                                        <option value="0" @if(old('stock_status') == 0) selected @endif>غیر فعال</option>
+                                        <option value="1" @if(old('stock_status') == 1) selected @endif>فعال</option>
                                     </select>
                                 </div>
-                                @error('status')
+                                @error('ststock_statusatus')
                                 <span class="alert_required bg-danger text-white p-1 rounded" role="alert">
                                     <strong>
                                         {{ $message }}

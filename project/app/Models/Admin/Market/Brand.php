@@ -24,7 +24,7 @@ class Brand extends Model
         
     
 
-    protected $table = "product_brands";
+   
 
     protected $cast = ['logo' => 'array'];
 

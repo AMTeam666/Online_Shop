@@ -22,16 +22,18 @@ class ProductRequest extends FormRequest
     public function rules(): array
     {
         return [
+     
             'product_name' => 'required|min:2|regex:/^[ا-یa-zA-Z0-9\-۰-۹ء-ي., ]+$/u',
             'product_image' => 'required|image|mimes:png,jpg,jpeg,gif',
+            'description' => 'required|min:2|regex:/^[ا-یa-zA-Z0-9\-۰-۹ء-ي.,)(.:: ]+$/u',       
             'price' => 'required|numeric',
             'stock' => 'required|numeric',
             'age_range' => 'required|numeric',
-            'gender' => 'required|numeric|in:0,2',
+            'gender' => 'required|min:2|regex:/^[ا-یa-zA-Z0-9\-۰-۹ء-ي., ]+$/u',
             'stock_status' => 'required|numeric|in:0,1',
             'category_id' => 'required|min:1|regex:/^[0-9]+$/u|exists:product_categories,id',
             'brand_id' => 'required|min:1|regex:/^[0-9]+$/u|exists:brands,id',
-            'user_id' => 'required|min:1|regex:/^[0-9]+$/u|exists:users,id',
+            // 'user_id' => 'required|min:1|regex:/^[0-9]+$/u|exists:users,id',
 
         ];
     }

@@ -35,6 +35,7 @@
                     <table class="table table-striped table-hover h-150px">
                         <thead>
                         <tr>
+                        
                             <th>#</th>
                             <th>نام کالا</th>
                             <th>تصویر کالا</th>
@@ -44,22 +45,23 @@
                             <th>برند کالا</th>
                             <th>جنسیت</th>
                             <th>رنج سنی</th>
-                            <th>وضعیت</th>
                             <th class="max-width-16-rem text-center"><i class="fa fa-cogs"></i> تنظیمات</th>
                         </tr>
                         </thead>
                         <tbody>
                         @foreach ($products as $product)
-
                             <tr>
                                 <th>{{ $loop->iteration }}</th>
-                                <td>{{ $product->name }}</td>
+                                <td>{{ $product->product_name }}</td>
                                 <td>
-                                    <img src="{{ asset($product->image['indexArray'][$product->image['currentImage']] ) }}" alt="" width="100" height="50">
+                                    <img src="{{ asset($product->product_image) }}" alt="" width="50" height="50">
                                 </td>
                                 <td>{{ $product->price }} تومان</td>
-                                <td>{{ $product->weight }} کیلو</td>
+                                <td>{{ $product->stock }} </td>
                                 <td>{{ $product->category->name }}</td>
+                                <td>{{ $product->brand->brand_name }}</td>
+                                <td>{{ $product->gender }}</td>
+                                <td>{{ $product->age_range }}</td>
                                 <td class="width-8-rem text-left">
                                     <div class="dropdown">
                                         <a href="#" class="btn btn-success btn-sm btn-block dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-expanded="false">

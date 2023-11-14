@@ -36,10 +36,10 @@
                     <table class="table table-striped table-hover">
                         <thead>
                             <tr>
-                                <th>#</th>
-                                <th>نام دسته بندی</th>
+                                <th class="number-list-header-table-admin-page">#</th>
+                                <th class="name-header-table-admin-page">نام دسته بندی</th>
+                                <th class="slug-header-table-admin-page">اسلاگ</th>
                                 <th>توضیحات</th>
-                                
                                 <th class="max-width-16-rem text-center"><i class="fa fa-cogs"></i> تنظیمات کلی </th>
                             </tr>
                         </thead>
@@ -48,15 +48,15 @@
                            @foreach($productCategories as $key => $productCategory)
                              <tr>
                                 <th>{{ $key += 1 }}</th>
-                                <td>{{ $productCategory->name }}</td>
-                                 <td>{{ $productCategory->description }}</td>
-                                 <td>{{ $productCategory->slug }}</td>
+                                <td class="name-column-table-admin-page">{{ $productCategory->name }}</td>
+                                <td class="slug-column-table-admin-page">{{ $productCategory->slug }}</td>
+                                 <td class="description-column-table-admin-page">{{ $productCategory->description }}</td>
                                 <td class="width-16-rem text-left">
-                                    <a href="{{ route('admin.market.category.edit', $productCategory->id) }}" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i> ویراش</a>
+                                    <a href="{{ route('admin.market.category.edit', $productCategory->id) }}" class="btn btn-primary btn-sm button-edit-object-admin-page"><i class="fa fa-edit"></i> ویراش</a>
                                     <form class="d-inline" action="{{ route('admin.market.category.destroy', $productCategory->id) }}" method="post">
                                         @csrf
                                         @method('delete')
-                                        <button class="btn btn-danger btn-sm delete" type="submit"><i class="fa fa-trash-alt"></i> حذف</button>
+                                        <button class="btn btn-danger btn-sm delete button-delete-object-admin-page" type="submit"><i class="fa fa-trash-alt"></i> حذف</button>
                                     </form>
                                 </td>
                              </tr>

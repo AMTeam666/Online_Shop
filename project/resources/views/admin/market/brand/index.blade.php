@@ -36,12 +36,13 @@
                     <table class="table table-striped table-hover">
                         <thead>
                             <tr>
-                                <th>#</th>
-                                <th>نام برند</th>
-                                <th>لوگو</th>
+                                <th class="number-list-header-table-admin-page">#</th>
+                                <th class="name-header-table-admin-page">نام برند</th>
+                                <th class="slug-header-table-admin-page">اسلاگ</th>
+                                <th class="logo-brand-header-table-admin-page">لوگو</th>
                                 <th>توضیحات</th>
 
-                                <th class="max-width-16-rem text-center"><i class="fa fa-cogs"></i> تنظیمات کلی </th>
+                                <th class="max-width-16-rem text-center total-options-header-table-admin-page"><i class="fa fa-cogs"></i> تنظیمات کلی </th>
                             </tr>
                         </thead>
                         <tbody>
@@ -50,16 +51,18 @@
 
                             <tr>
                                 <th>{{ $key += 1 }}</th>
-                                <td>{{ $brand->name }}</td>
+                                <td class="name-column-table-admin-page">{{ $brand->name }}</td>
+                                <td class="slug-column-table-admin-page">{{ $brand->slug }}</td>
                                 <td>
-                                    <img src="{{ asset($brand->logo) }}" alt="" width="100" height="50">
+                                    <img src="{{ asset($brand->logo) }}" alt="" width="50" height="50">
                                 </td>
+                                <td class="description-column-table-admin-page">{{ $brand->description }}</td>
                                 <td class="width-16-rem text-left">
-                                    <a href="{{ route('admin.market.brand.edit', $brand->id) }}" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i> ویراش</a>
+                                    <a href="{{ route('admin.market.brand.edit', $brand->id) }}" class="btn btn-primary btn-sm button-edit-object-admin-page"><i class="fa fa-edit"></i> ویراش</a>
                                     <form class="d-inline" action="{{ route('admin.market.brand.destroy', $brand->id) }}" method="post">
                                         @csrf
                                         {{ method_field('delete') }}
-                                        <button class="btn btn-danger btn-sm delete" type="submit"><i class="fa fa-trash-alt"></i> حذف</button>
+                                        <button class="btn btn-danger btn-sm delete button-delete-object-admin-page" type="submit"><i class="fa fa-trash-alt"></i> حذف</button>
                                     </form>                             
                                 </td>
                             </tr>
